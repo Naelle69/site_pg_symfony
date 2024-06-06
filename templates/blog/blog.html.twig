@@ -1,0 +1,116 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}BlogController!{% endblock %}
+
+{% block body %}
+
+<section class="blog ">
+    <h2 class="h2marron mb-4"> Notre Blog Conseils </h2>
+    <h4 class="ptexte texterecettes mb-4 "> 
+    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
+  </h4>
+ <div class="grid-container">
+  {% for article in articles %}
+  <div class="article">
+    <div class="card shadow-lg bg-white">
+      <img class="imageArticle" src="{{ asset('assets/images/') ~ article.image }}" alt="{{ article.titre }}"/>
+      <h2 class="h4vert mb-4 p-6">{{ article.titre }}</h2>
+      <h4 class="article-text ptexte text-base mb-4 p-6">{{ article.texte }}</h4>
+      <div class="infos-plus p-6">
+        <h4 class="metadata">Ecrit le {{ article.createdAt | date('d/m/Y') }} à {{ article.createdAt | date('H:I') }}</h4>
+        <button class="bouttonBeige" style="background-color: #D79D66; color:#ffffff" type="submit">Lire plus</button>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+</section>
+
+<style>
+section {
+  margin: 60px 20px 0 60px;
+}
+
+.articles {
+  display: flex;
+  justify-items: flex-end;
+  flex-direction: column;
+  border-radius: 40px 0; 
+  width: 30%;
+  height: auto;
+}
+
+.article {
+  border-radius: 40px 0 40px 0; 
+  width: 100%;
+  height: auto;
+}
+
+.article-text {
+  display:-webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  line-height: 1.3em;
+  max-height: calc(1.7em * 4);
+}
+
+.btn-lire-suite {
+  background-color: #008CBA;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.infos-plus{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items:center;
+}
+
+.imageArticle{
+  border-radius: 40px 0  0 0;
+}
+
+ .grid-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
+    margin: 0 auto;
+    max-width: 1200px;
+    margin-top:50px
+  }
+  
+.card{
+    border-radius: 40px 0 40px 0; 
+}
+
+@media screen and (min-width:500px) and (max-width:1020px) {
+  section{
+     margin: 200px 60px 0 60px;
+  }
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  } 
+}
+
+@media screen and (min-width:1021px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }  
+
+  section{
+     margin: 200px 100px 100px 100px;
+  }
+}
+</style>
+
+{% endblock %}
+
+
+

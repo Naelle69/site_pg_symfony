@@ -1,0 +1,96 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Votre panier{% endblock %}
+
+{% block body %}
+<h1 class="h3vert votrepanier max-w-sm px-4 pt-14 ml-14 mr-4 mb-6">Votre panier</h1>
+<section class="formpanier panier max-w-sm px-4 py-4 ml-14 mr-4">
+    
+
+    <table >
+        <div >
+            <thead>
+                <tr>
+                    <th class="h4vert pr-2 py-4">Article</th>
+                    {# <th>Produit</th> #}
+                    <th class="h4vert px-4 py-4">Prix</th>
+                    <th class="h4vert px-4 py-4">Quantité</th>
+                    <th class="h4vert text-end pl-2 py-4">Total</th>
+        
+                </tr>
+            </thead>
+        </div>
+
+            <tbody class="bg-white divide-y divide-[#D79D66]">
+            
+                {% for element in dataPanier %}
+              
+                    <tr class="items-center">
+                        <td class="pr-2 py-4 whitespace-nowrap">
+                            <div class="items-center">
+                                <div class="flex-shrink-0 h-10 w-10">
+                                    <img class="imagepanier" src="{{asset('assets/images/') ~  element.produit.image }}" alt="Product image" class="w-full"/>
+                                </div>
+                                <div class="">
+                                    <div class="h4vertnormal font-medium ">{{ element.produit.titre }}</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="px-4  whitespace-nowrap">
+                            <div class="h4vert">{{ element.produit.price }} €</div>
+                        </td>
+
+                        <td class="items-center px-4 pt-10 flex  whitespace-nowrap gap-2">
+                            <a href="{{path("app_panier_remove", {id: element.produit.id})}}" alt="Panier" ><img src="{{asset('assets/images/svg-icones/minus1.svg')}}"/></a>
+                            <div class="h4vert">{{ element.quantite }}</div>
+                            <a href="{{path("app_panier_add", {id: element.produit.id})}}" alt="Panier" ><img src="{{asset('assets/images/svg-icones/plus.svg')}}"/></a>
+                        </td>
+ 
+                        <td class="pl-2 text-end whitespace-nowrap">
+                            <div class="h4vert">{{ element.quantite * element.produit.price }} €</div>
+                        </td>
+
+                       
+                    </tr>
+               
+                {% else %}
+                    <tr>
+                        <td colspan="5" class="h4vert text-center">Votre panier est vide</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+            <tfoot>
+           
+                <tr class="mb-4 space-between border-y border-[#D79D66]">
+                    <td class="h4vert" colspan="3">Total</td>
+                    <td><a class=" p-4 py-2  h5menu text-center mt-4" href="{{path("app_panier_delete_all")}}"  ><img src="{{asset('assets/images/svg-icones/remove.svg')}}"/></a></td>
+                    <td class="text-end h4marron">{{ total }} €</td>
+                    
+                </tr>
+                <tr>
+                    <td><button class="bouttonBeige p-4 py-2  h5menu text-center mt-4">Payer</button></td>
+                    
+                </tr>
+             
+            </tfoot>
+        </div>
+    </table>
+</section> 
+
+<style>
+    /* PANIER */
+  table{  
+    width: 100%;
+  }
+
+  .formpanier{
+    border: solid 1px  rgb(72,69,38);
+    border-radius: 30px 5px 30px 5px;
+  }
+   /* FIN PANIER */
+</style>
+{% endblock %}
+
+
+
+                           

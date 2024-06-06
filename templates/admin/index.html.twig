@@ -1,0 +1,27 @@
+{% extends '@EasyAdmin/page/content.html.twig' %}
+
+
+
+
+{% block content %}
+    <div class="text-center mt-4">
+        <h1 class="text-center">
+            Administrateur
+        </h1>
+        <h2>
+            Ici vous retrouverez toute l'interface administrative du site web
+            Pok'Gourmet
+        </h2>
+        <a href="{{ path('app_home')}}"
+           class="bouttonBeige" style="background-color: #D79D66; color:#ffffff" type="submit">Revenir à la page d'acceuil</a>
+    </div>
+
+    <style>
+.bouttonBeige{
+    padding: 10px 15px;
+      border-radius: 15px 0 15px 0; 
+      margin-top: 50px;
+}
+    </style>
+{% endblock %}
+

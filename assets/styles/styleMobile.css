@@ -1,0 +1,505 @@
+/*........ DEBUT HEADER .........*/
+body{
+  margin: 0%;
+  padding: 0%;
+}
+
+    /* topbar */
+  .client{
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+    .menuweb{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 500px;
+    }
+
+    .menuweb:hover{
+    color: #D79D66 ;
+    }
+
+    .menunav-item{
+      transition: background-color 0.25s;
+    }
+    
+    .web{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 80px;
+    width:90%;
+    background-color: #484526;
+    border-radius:30px 5px 30px 5px;
+    position: fixed;
+    top: 20px;
+    z-index: 999;
+    margin-left: 5%;
+    margin-right: 5%;
+    visibility: hidden;
+    transition: background-color 0.5s;
+    }
+    
+    .web:active{
+      color: #62615C;
+    }
+      
+    .web:hover{
+    box-shadow: 1px 1px 3px 3px rgb(222, 162, 105, 0.2);
+    }
+
+
+    /* fin topbar */
+
+
+    /* sidebar */
+    .mobil{
+      visibility:visible;
+      padding:80px 5px 80px 5px;
+      height:690px;
+      width: 40PX;
+      background-color: #484526;
+      border-radius: 15px 5px 15px 5px;
+      margin-top: 40px;
+      display:flex;
+      align-items: center;
+      justify-content: center;
+      position: fixed;
+      z-index:5;
+    }
+
+    .mobil:hover{
+      box-shadow: 1px 1px 3px 3px rgb(222, 162, 105, 0.2);
+    }
+
+    .contentmobile {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: column;
+      height: 450px;
+      }
+
+    .client{
+      height: 80px;
+      display: flex;
+      justify-content: space-around;
+      flex-direction: column;
+    }
+    /* fin sidebar */
+    
+
+    /* contenu homepage */
+    header{
+      background-color: #62615C;
+      width: 100%;
+      height: 790px;
+      z-index: -1;
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+    }
+    
+    .contenuhomepage{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      transform: translateY(5px);
+      width: 93%;
+      margin-left: 30px;
+    }  
+    
+    .offredelasemaine{
+      padding: 1rem;
+      padding-bottom: 15%;
+      width: 70%;
+      height: 450px;
+      border-radius:50px 5px 0px 0px;
+      background-color: #ffffff;
+    }
+    
+    .videohompepage{
+      display: flex;
+     justify-content: center;
+      width: 100%;
+      height: 50%;
+      margin-bottom: 40px;
+      border-radius:35px 5px 35px 5px;
+      box-shadow: 1px 1px 3px 3px rgba(222, 162, 105, 0.5); 
+    }
+    .offre{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .pokgourmet{
+      display: none;
+      height: auto;
+      width: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .mb-5{
+      font-family: 'Arial Narrow', Arial, sans-serif;
+      font-size: 32px;
+      font-weight: lighter;
+      color:  #484526;
+    }
+
+    /* fin contenu homepage */
+/*........ FIN HEADER .........*/
+
+
+/* .......DEBUT SECTION NOS OFFRES...........*/
+  /* nos plats */
+/*   .relative {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+  } */
+
+/*   .plat{
+    background-image:url("images/fondblanc.svg");
+    background-repeat: no-repeat;
+} */
+  
+
+
+    
+   /* nos extras */
+   .section2{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+   }
+
+  .nosextras{
+    background-image:url("../images/fond-vert.svg");
+    background-repeat: no-repeat;
+    background-size:contain;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-width: 90%;
+    min-height: 170px;
+    margin-left: 5%;
+    margin-right: 5%;
+    transform: translateY(60px);
+  }
+
+  .imageExtras{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .imageExtras1{
+    transform: translateY(-30px);
+  }
+
+  .imageExtras2{
+    transform: translateY(-50px);
+  }
+
+  .imageExtras3{
+    transform: translateY(-60px);
+  }
+
+  .infos{
+    background-color: #62615C;
+    min-width: 250px;
+    min-height: auto;
+    padding: 5%;
+    z-index: 1;
+    border-radius: 5%; 
+    box-shadow: 2px 2px 3px 3px rgb(215, 157, 102, 0.2);
+  }
+/* .......FIN SECTION NOS OFFRES...........*/
+
+
+/* .......DEBUT SECTION NOS RECETTES...........*/
+.section3{
+  padding-left: 40px;
+}
+
+/* .recette{
+  margin-left: 0px;
+  min-width: auto;
+  min-height: auto;
+  display: flex;
+  justify-content:center;
+} */
+
+.lien:hover{
+color:#ffffff;
+}
+
+.lien{
+text-decoration: underline;
+padding-right: 10px;
+}
+
+.relative {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.imagerecette{
+  width: 180px;
+  border-radius: 50%;
+  position: fixed;
+  left: 65px;
+  top:50px;
+}
+
+.imagerecette2{
+  width: 160px;
+  border-radius: 50%;
+  position: fixed;
+  left: 45px;
+  top:25px;
+}
+
+.flip-card-front {
+  z-index: 2;  
+  background-image: url("../images/grandfond.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+/*   transition: ease-in-out 0.3s; */
+  background-size: 100%;
+  text-align: center;
+  width: 90%;
+  height: 60%;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+  background-image: url("../images/grandfondvert.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  color: #ffffff;
+  width: 90%;
+  height: 60%;
+}
+
+.flip-card-back:hover{
+  color:#ffffff;
+}
+
+/* .flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 460px;
+  perspective: 1000px;
+} */
+
+
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+/*........ FIN SECTION NOS IDEES RECETTES .........*/
+
+
+/* .......DEBUT SECTION PROMOTION...........*/
+  .exclusivite{
+    background-color: #ffffff;
+    border-radius: 50px 5px 50px 5px;
+    box-shadow: 3px 3px 5px 5px rgb(215, 157, 102, 0.2);
+    flex-direction: column;
+    padding: 5%;
+    width: 100%;
+    height: auto;
+    margin-bottom: 100px;
+    }
+  
+    .galleryimages{
+    width: 50%;
+    display: none;
+    }   
+/* .......FIN SECTION PROMOTION...........*/
+
+
+/* .......DEBUT SECTION ASTUCES...........*/
+  .ptexte {
+  font-weight: bold;
+ }
+ 
+ .astuce {
+  background-image: linear-gradient(to top left, #62615C, #D79D66, #484526);
+  background-size: 200% auto;
+  animation: gradient 5s ease infinite;
+  padding: 15%;
+  width: 100%;
+  height: auto;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+/* .......FIN SECTION ASTUCES...........*/
+
+
+/* ......DEBUT SECTION AVATANGES...... */
+.icones2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.avantages{
+  height: auto;
+  width: auto;
+  margin-top: 50px;
+}
+
+.icones2{
+  margin-bottom: 40px;
+}
+
+.imageavantages{
+  border: solid 2px rgb(72,69,38);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.iconesavantages{
+  width: 36px;
+  height: 36px;
+}
+/* ......FIN SECTION AVATANGES...... */
+
+
+/* ....DEBUT SECTION AVIS .....*/
+.nosavis{
+  padding-top: 8%;
+  padding-bottom: 5%;
+  display: flex;
+  align-items: center;
+}
+
+.cercleavis{
+  border: solid 2px rgb(72,69,38);
+  background-color: #ffffff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avis{
+  width: 280px;
+  height: 250px;
+  background-color: #ffffff;
+  border: solid 1px #D79D66;
+  border-radius: 30px 5px 30px 5px;
+  padding: 30px;
+  padding-top: 70px;
+  text-align: center;
+}
+
+.icones{
+  width: auto;
+  display: flex;
+  flex-direction:row;
+  justify-content: center;
+  position: relative;
+  top:30px;
+  gap: 20px; 
+}
+
+.iconesavis1{
+  width: 36px;
+}
+
+.iconesavis2{
+  position: relative;
+  top: -55px;
+  width: 60px;
+  height: 60px;
+}
+/* ....FIN SECTION AVIS .....*/
+
+/*........ DEBUT SECTION FOOTER .........*/
+  footer{
+  background-color: rgb(72,69,38);
+  width: 100%;
+  margin: 0%;
+  padding: 0%;
+  }
+
+  .newsletters{
+  border-radius: 50px 5px 50px 5px;
+  box-shadow: 3px 3px 5px 5px rgba(22, 22, 22, 0.15);
+  background: transparent;
+  backdrop-filter: blur(10px);
+  margin-top: 10%;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  }
+
+  .lentreprise {
+  flex-direction: column;
+  }
+  
+  .copyright{
+  color:#D79D66;
+  border:solid 1px #D79D66;
+  }
+  
+  svg{
+  color:#D79D66
+  }
+  
+  /* slider */
+  
+/*........ FIN SECTION FOOTER .........*/
+
+
+
+
+

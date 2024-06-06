@@ -1,0 +1,48 @@
+
+
+
+    <nav class="mobil ml-2"> 
+        <div class="contentmobile">
+          <a class="rechercher" href="#">
+            <img src="{{asset('assets/images/svg-icones/loupemarron.svg')}}" alt="Rechercher" width="20"/>
+          </a>
+          <a class="home" href="{{path('app_home')}}">
+            <img src="{{asset('assets/images/svg-icones/home.svg')}}" alt="Rechercher" width="20"/>
+          </a>
+
+            <a class="telephone mb-2 " href="lien">
+              <img src="{{asset('assets/images/svg-icones/telephonemarron.svg')}}" alt="Panier" width="19"/> 
+            </a>
+            <a class="enveloppe " href="{{path('app_home')}}#sectioncontact">
+              <img src="{{asset('assets/images/svg-icones/enveloppe.svg')}}" alt="Mon compte" width="20"/>
+            </a>
+            <a class="facebook " href="https://www.instagram.com/com.ghaphicdesigns/">
+              <img src="{{asset('assets/images/svg-icones/facebookmarron.svg')}}" alt="Panier" width="19"/> 
+            </a>
+            <a class="instagram " href="https://www.instagram.com/com.ghaphicdesigns/">
+              <img src="{{asset('assets/images/svg-icones/instagrammarron.svg')}}" alt="Mon compte" width="20"/>
+            </a>
+          
+            <a class="panierclient" href="{{path('app_panier_index')}}">
+              <img src="{{asset('assets/images/svg-icones/panierclient.svg')}}" alt="Panier" width="19"/> 
+            </a>
+            <a class="moncompte" href="{{path('app_login')}}">
+              <img src="{{asset('assets/images/svg-icones/moncompte.svg')}}" alt="Mon compte" width="20"/>
+            </a>
+        </div>
+    </nav>
+
+<script>
+window.addEventListener("scroll", function() {
+  var footer = document.querySelector(".footer");
+  var scrollPosition = window.innerHeight + window.scrollY;
+  var footerPosition = footer.offsetTop + footer.offsetHeight;
+  
+  if (scrollPosition >= footerPosition) {
+    footer.style.backgroundColor = "#62615C";
+  } else {
+    footer.style.backgroundColor = "#484526";
+  }
+});
+</script>
+

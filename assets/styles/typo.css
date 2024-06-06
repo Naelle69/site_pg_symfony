@@ -1,0 +1,297 @@
+/* DEBUT TYPOGRAPHIE */
+@font-face {
+  font-family: 'ShantellSans-Italic';
+  src: url('../fonts/ShantellSans-Italic.ttf') format('truetype');  
+}
+
+@font-face {
+  font-family: 'ShantellSans';
+  src: url('../fonts/ShantellSans.ttf') format('truetype');  
+}
+
+@font-face {
+  font-family: 'IstokWeb-Regular';
+  src: url('../fonts/IstokWeb-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'IstokWeb-Bold';
+  src: url('../fonts/IstokWeb-Bold.ttf') format('truetype');  
+}
+
+@font-face {
+  font-family: 'IstokWeb-BoldItalic';
+  src: url('../fonts/IstokWeb-BoldItalic.ttf') format('truetype');  
+}
+
+@font-face {
+  font-family: 'IstokWeb-Italic';
+  src: url('../fonts/IstokWeb-Italic.ttf') format('truetype');  
+}
+
+
+
+/* h1{
+    font-family: 'ShantellSans-Italic';
+    font-size: 32px;
+    font-weight: lighter;
+    color:  #484526;
+  } */
+  
+  .h2vert{
+
+    font-size: 24px;
+    font-weight: bold;
+    color: #484526;
+  }
+
+  .h2blanc{
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+  }
+
+  .h2marron{
+    /* font-family: 'ShantellSans'; */
+    font-family: 'IstokWeb-Bold';
+    font-size: 24px;
+    color: rgb(242, 182, 126);
+  }
+  
+  .h2marronrigth{
+    font-size: 24px;
+    font-weight: bold;
+    color: #D79D66;
+    padding-left: 100px;
+  }
+  
+  .h3blanc{
+    font-size: 20px;
+    font-weight: normal;
+    color: #ffffff;
+  }
+ /*  .h3blanc1{
+    font-size: 20px;
+    font-weight: normal;
+    color: #ffffff;
+  } */
+  .h3vert{
+    font-size: 20px;
+    font-weight: bold;
+    color: #484526;
+  }
+  .h3marron{
+    font-size: 20px;
+    font-weight: bold;
+    color: #D79D66;
+  }
+  
+  .h4marron{
+    font-size: 14px;
+    font-weight: bold;
+    color: #D79D66;
+  }
+
+  .h4vert{
+    font-size: 14px;
+    font-weight: bold;
+    color: #484526;
+  }
+
+  .h4vertnormal{
+    font-size: 14px;
+    font-weight: normal;
+    color: #484526;
+  }
+
+  .h4blanc{
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+  }
+  .h5marron{
+    font-size: 13px;
+    font-weight: normal;
+    color: #D79D66;
+  }
+  .h5noir{
+    font-size: 13px;
+    font-weight: normal;
+    color:  #343331;
+  }
+  .h5blanc{
+    font-size: 12px;
+    font-weight: normal;
+    color:  #ffffff;
+  }
+  .h5menu{
+    font-size: 12px;
+    font-weight: normal;
+    color:  #ffffff;
+  }
+
+  .h5menu:hover{
+    color:#D79D66;
+  }
+
+  .pastuce{
+    font-size: 14px;
+    font-weight: normal;
+    color:  #1e1e1d;
+  }
+  .ptexte{
+    font-size: 14px;
+    font-weight: normal;
+    color:  #343331;
+  }
+  
+  .ptexteBeige{
+    font-size: 14px;
+    font-weight: bold;
+    color:#D79D66;
+  }
+  
+  /* .pinformation{
+    font-size: 14px;
+    font-weight: normal;
+    font-style: italic;
+    color:  #ffffff;
+  }
+ */
+  .ptexte2{
+    font-size: 14px;
+    font-weight: normal;
+    color:  #ffffff;
+  }
+  /* FIN TYPOGRAPHIE */
+
+
+  
+  @media screen and (min-width:1021px){
+    h1{
+      font-size: 90px;
+      font-weight: lighter;
+      color:  #484526;
+    }
+    
+    .h2vert{
+      font-size: 60px;
+    }
+  
+    .h2blanc{
+      font-size: 60px;
+    }
+  
+    .h2marron{
+      font-size: 60px;
+      font-weight: bold;
+      color: rgb(242, 182, 126);
+    }
+    
+    .h2marronrigth{
+      font-size: 60px;
+      font-weight: bold;
+      color: #D79D66;
+      padding-left: 100px;
+    }
+    
+    .h3blanc{
+      font-size: 45px;
+      font-weight: normal;
+      color: #ffffff;
+    }
+    .h3blanc1{
+      font-size: 45px;
+      font-weight: normal;
+      color: #ffffff;
+    }
+    .h3vert{
+      font-size: 45px;
+      font-weight: bold;
+      color: #484526;
+    }
+    .h3marron{
+      font-size: 45px;
+      font-weight: bold;
+      color: #D79D66;
+    }
+    
+    .pgourmet{
+    font-size: 25px;
+    font-weight: normal;
+    color:  #ffffff;
+    }
+
+    .h4marron{
+      font-size: 18px;
+      font-weight: bold;
+      color: #D79D66;
+    }
+    .h4vert{
+      font-size: 18px;
+      font-weight: bold;
+      color: #484526;
+    }
+    .h4blanc{
+      font-size: 18px;
+      font-weight: bold;
+      color: #ffffff;
+    }
+    .h5marron{
+      font-size: 14px;
+      font-weight: normal;
+      color: #D79D66;
+    }
+    .h5noir{
+      font-size: 14px;
+      font-weight: normal;
+      color:  #343331;
+    }
+
+    .h5blanc{
+      font-size: 14px;
+      font-weight: normal;
+      color:  #ffffff;
+    }
+    .h5menu{
+      font-size: 14px;
+      font-weight: normal;
+      color:  #ffffff;
+    }
+  
+    .h5menu:hover{
+      color:#D79D66;
+    }
+  
+    
+    .pastuce{
+      font-size: 16px;
+      font-weight: normal;
+      color:  #1e1e1d;
+    }
+    .ptexte{
+      font-size: 16px;
+      font-weight: normal;
+      color:  #343331;
+    }
+    
+    .ptexteBeige{
+      font-size: 16px;
+      font-weight: bold;
+      color:#D79D66;
+    }
+    
+    .pinformation{
+      font-size: 16px;
+      font-weight: normal;
+      font-style: italic;
+      color:  #ffffff;
+    }
+  
+    .ptexte2{
+      font-size: 16px;
+      font-weight: normal;
+      color:  #ffffff;
+    
+  }
+  }

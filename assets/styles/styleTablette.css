@@ -1,0 +1,382 @@
+
+
+/* TABLETTE */
+@media screen and (min-width:500px) and (max-width:1020px){
+
+/*......  HEADER ......*/
+
+    /* topbar */
+    .web{
+      visibility: visible;
+    }
+    /* fin topbar */
+
+
+     /*  sidebar */
+    .mobil{
+      visibility: hidden;
+    }
+    /*  sidebar */
+
+
+    /* contenuhomepage */
+    header{
+      height: 890px;
+    }
+
+    .mb-5{
+      font-size: 60px;
+    }
+  
+    .pgourmet{
+      visibility:visible;
+      margin: 0%;
+      margin-left: 200px;
+    }
+  
+    .logohomepage{
+      visibility:hidden;
+    }
+  
+    .contenuhomepage{
+        width: 100%;
+        height: 100%;
+        margin-left: 0%;
+        margin-right: 0%;
+      }
+    
+      .offredelasemaine{
+        display: flex;
+        flex-direction: row-reverse;      
+        justify-content: space-evenly;
+        align-items: center;
+        border-radius: 0px 5px 50px 0px;
+        padding: 0%;
+        transform: translateX(-30px);
+      }
+  
+      .offre{
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+  
+      .videohompepage{
+        width: 65%;
+        height: 90%;
+        margin-bottom: 0px;
+      }
+    
+      .pokgourmet{
+        width: 90%;
+        display: flex;
+        align-items:flex-start;
+        margin-left: 0%;
+        margin-top: 5%;
+        margin-bottom: 0px;
+      } 
+       /* fin contenuhomepage */     
+/*......  FIN HEADER ......*/
+
+
+/* .....DEBUT SECTION NOS OFFRES.......*/
+  /* nos plats */
+  .nosplats .relative{
+    margin-left: 0px;
+    margin-right:0px;
+    padding-right: 40px;
+  }
+
+  .plat{
+    min-width: 290px;
+    min-height: 330px;
+    margin-left: 20px;
+    margin-right: 70px;
+    padding-top: 80px;
+  } 
+        
+      .plat img{
+        min-width: 140px;
+        border-radius: 50%;
+        position: relative;
+        top: -240px;
+        left: 180px;
+        z-index: 1;
+      }
+        
+      .contenu-plat{
+        min-width: 140px;
+        margin-top: 50px;
+      }
+
+  
+/* nos extras */
+.section2{
+  margin-top: 50px;
+}
+
+.nosextras{
+  min-width: 500px;
+  min-height: 370px;
+  transform: translateY(90px);
+}
+
+.img-extras{
+  min-width: 110px;
+  min-height: 110px;
+}
+
+.imageExtras1{
+  transform: translateY(-110px);
+}
+
+.imageExtras2{
+  transform: translateY(-140px);
+}
+
+.imageExtras3{
+  transform: translateY(-160px);
+}
+
+.infos{
+  transform: translateY(-100px);
+  min-width: 300px;
+  min-height: auto;
+}
+/* .......DEBUT SECTION EXCLUSIVITE...........*/
+
+  .exclusivite{
+    margin-bottom: 0%;
+    padding: 10%;
+    }
+
+  .galleryimages{
+    width: 50%;
+    display: none;
+  } 
+
+  .exclusivite .h3marron{
+    font-size: 22px;
+  }
+  
+  .exclusivite .h3vert{
+    font-size: 18px;
+  }
+  
+  .promotion{
+    margin: 50px;
+    margin-top: 50px;
+    gap: 15px;
+    justify-content: center;
+  }
+  
+  .container{
+    padding: 0%;
+    width: 100%;
+  } 
+  
+  .galleryimages{
+    width: 60%;
+  } 
+
+  .gallerie6{
+    border-radius:40px 0px 0px 0px;
+  }
+  
+  .gallerie1{
+    border-radius:0px 0px 0px 10px;
+  }
+  
+  .gallerie2{
+    border-radius:0px 10px 0px 0px;
+  }
+  
+  .gallerie3{
+    border-radius:0px 0px 40px 0px;
+  }
+/* .......FIN SECTION EXCLUSIVITE...........*/
+
+
+/* .......DEBUT SECTION AVANTAGES...........*/
+.avantages{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+  
+  .icones2{
+    width: 114px;
+  }
+  
+  .imageavantages{
+    border: solid 2px rgb(72,69,38);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .iconesavantages{
+    width: 36px;
+    height: 36px;
+    }
+/* .......FIN SECTION AVANTAGES...........*/
+
+
+/* .......FIN SECTION AVIS...........*/
+.nosavis{
+    padding-top:60px;
+    padding-bottom: 3%;
+    margin-bottom: 60px;
+    display: flex;
+    align-items: center;
+
+  }
+  
+  .cercleavis{
+    border: solid 2px rgb(72,69,38);
+    background-color: #ffffff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .avis{
+    width: 280px;
+    height: 250px;
+    background-color: #ffffff;
+    border: solid 1px #D79D66;
+    border-radius: 30px 5px 30px 5px;
+    padding: 30px;
+    padding-top: 70px;
+    text-align: center;
+  }
+  
+  .icones{
+    width: auto;
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    position: relative;
+    top:30px;
+    gap: 20px; 
+  }
+  
+  .iconesavis1{
+    width: 36px;
+  }
+  
+  .iconesavis2{
+    position: relative;
+    top: -55px;
+    width: 60px;
+    height: 60px;
+  }
+/* .......FIN SECTION AVIS...........*/
+
+/*........ DEBUT SECTION NOS IDEES RECETTES .........*/
+.section3{
+  padding-left: 0px;
+}
+
+.titrerecettes{
+  margin-top: 0px;
+  width: 85%;
+}
+
+.nosideesrecettes{
+  padding: 0%;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.boutton4{
+  display: block;
+  position: fixed;
+}
+/*........ FIN SECTION NOS IDEES RECETTES .........*/
+
+
+/* .......... DEBUT FOOTER ............. */
+.contacts-mentions{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  width: 100%;
+  margin: 0%;
+  text-align: start;
+}
+
+.lentreprise{
+  text-align: start;
+  width: auto;
+  justify-content: flex-start;
+  margin-right: 15px;
+}
+
+.contactez-nous{
+  text-align: start;
+  width: 26%;
+}
+
+.nouscontacter{
+  text-align: start;
+  justify-content: flex-start;
+}
+
+.mentionslegales{
+  width: 30%;
+}
+
+.container{
+  display: none;
+}
+
+
+
+/* .......... FIN FOOTER ............. */
+  
+.contacts-mentions{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  width: 100%;
+  margin: 0%;
+  text-align: start;
+}
+
+.lentreprise{
+  text-align: start;
+  width: auto;
+  justify-content: flex-start;
+  margin-right: 15px;
+}
+
+.contactez-nous{
+  text-align: start;
+  width: 26%;
+}
+
+.nouscontacter{
+  text-align: start;
+  justify-content: flex-start;
+}
+
+.mentionslegales{
+  width: 30%;
+}
+
+.container{
+  display: none;
+}
+}
+  

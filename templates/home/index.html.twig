@@ -1,0 +1,353 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Home - Pok'Gourmet{% endblock %}
+
+
+{% block body %}
+    <header>
+        {% include "main/homepage/contenuHomepage.html.twig" %} 
+    </header>
+    <main>
+{# ------------------PLATS------------------- #}
+        <div id="plat" class="nosplats sm:mt-10">
+            <div class="offres ml-16 mt-10">
+              <h2 class="h2marron mb-4"> Nos offres </h2>
+              <h3 class="h3vert mb-4"> Nos plats </h3>
+            </div>
+           
+            <div class="container-plat">
+                <div class="nos-plats row ">
+                    {% for plat in plats %}
+                    <div class="col-lg-3 col-md-5 col-sm-4 col-12 mb-4">
+                        <div class="bg-plat plat p-10">
+                            <span class="contenu-plat">
+                                <h4 class="h4vert mb-4">{{ plat.titre }}</h4>
+                                <p class="ptexte pr-12">{{ plat.texte }}</p>
+                                <span class="achat mt-4 mb-4 flex justify-between">
+                                    <h4 class="h4vert prix">{{ plat.price }} €</h4>
+                                    <a class="ajout" href="{{ path('app_panier_add', {id: plat.id}) }}">+</a>
+                                </span>
+                            </span>
+                            <img class="imageplat" src="{{ asset('assets/images/') ~ plat.image }}" />
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div> 
+{# ------------------EXTRAS------------------- #}
+        <div class="section2 pl-10">
+            <div class="mt-5">
+                <h3 class="h3vert"> Nos extras </h3>
+            </div>
+
+            <div class="nosextras mx-4">
+                <div class="imageExtras imageExtras1">
+                    <img src="{{asset('assets/images/boisson.jpg')}}" class="img-extras   rounded-full mb-2" alt="boisson"/>
+                    <a href="https://www.youtube.com/watch?v=iObxqzbHl9Y"class="ptexteBeige lien text-center p-0">Boissons<a>
+                </div>
+                <div class="imageExtras imageExtras2 lg:mx-20 md:mx-16 mx-6">
+                    <img src="{{asset('assets/images/entree.jpg')}}" class="img-extras  rounded-full  mb-2 " alt="entre"/>
+                    <a href="https://www.youtube.com/watch?v=iObxqzbHl9Y"class="ptexteBeige lien text-center p-0">Entrées<a>
+                </div>
+                <div class="imageExtras imageExtras3">
+                    <img src="{{asset('assets/images/fruit.jpg')}}"  class="img-extras rounded-full mb-2" alt="dessert"/>
+                    <a href="https://www.youtube.com/watch?v=iObxqzbHl9Y"class="ptexteBeige lien text-center p-0">Desserts<a>
+                </div>
+            </div>
+            <div class="infos w-64">
+                <h4 class="ptexteBeige mb-2">D'où viennent nos produits</h4>
+                <p class="h5blanc informations mb-2 p-1 text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus semper bibendum ex et eleifend. Phasellus semper bibendum ex et eleifend. Donec accumsan.</p>
+                <a class="h5marron underline " href="https://maisoncolom.fr/?utm_source=google&utm_medium=cpc&utm_campaign=16519503723&utm_content=137275443027&utm_term=legumes%20en%20ligne&gclid=EAIaIQobChMIhMHk1Oyn_QIVFpBoCR1ajAbuEAAYASAAEgLbH_D_BwE"> Suivez le lien</a>
+            </div>
+        </div>   
+            
+{# ------------------RECETTES------------------- #}
+        <div class="section3">
+            <div>
+                <div class="h titrerecettes mt-12 mx-6">
+                    <h2 class="h2marron mb-4"> Nos idées recettes </h2>
+                    <h3 class="h3vert mb-2"> Des recettes à des prix bas </h3>
+                    <p class="ptexte texterecettes mb-4"> 
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus semper bibendum ex et eleifend. Donec accumsan. Pellentesque senectus 
+                    neque. Pellentesque se Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus semper bibendum ex et eleifend. Pellentesque senectus neque.
+                    </p>
+                </div>
+
+                <div class="container-recette">
+                    <div class="row gutter">
+                        {% for recette in recettes %}
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-12 mb-4">
+                            <div class="recette p-2 ml-4">
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                        <div class="flip-card-front">
+                                            <img class="imagerecette" src="{{ asset('assets/images/') ~ recette.imageFront }}" />
+                                            <div class="front-text ideetext text-center">
+                                                <h4 class="h4vert mb-6">{{ recette.titreFront }}</h4>
+                                                <h4 class="h4blanc">{{ recette.soustitre }}</h4>
+                                            </div>
+                                        </div>
+                                        <div class="flip-card-back p-4">
+                                            <img class="imagerecette2" src="{{ asset('assets/images/') ~ recette.imageBack }}" />
+                                            <div class="back-text ideetext text-start">
+                                                <h4 class="h4blanc ptexteBeige mb-2 pr-4">{{ recette.titreBack }}</h4>
+                                                <h3 class="ptexte2 mb-2 text-justify">{{ recette.texte }}</h3>
+                                                <a href="https://www.youtube.com/watch?v=iObxqzbHl9Y" class="ptexteBeige lien">{{ recette.lien }}</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+            {% include "main/body/exclusivites.html.twig" %}
+            {% include "main/body/avis.html.twig" %}
+            
+        </div>
+{# ------------------Contact form------------------- #}
+        
+        {% include "main/body/astuces.html.twig" %} 
+
+        <section class="sectionform">
+            <h2 class="h3vert mb-6">Contactez-nous!</h2>
+            <div class="form">
+                <div class="row form-content bg-white">
+                    <div class="col p-2">
+                        <form class="" method="post">     
+                            {{ form_start(form) }}
+                                {{form_row(form.lastname)}}
+                                {{form_row(form.Firstname)}}
+                                        
+                                {{form_row(form.phone)}}
+                                {{form_row(form.email)}}
+                                    
+                                {{form_row(form.message)}}
+                                {{form_row(form.password)}}
+                                <button class="bouttonBeige mt-4" style="background-color: #D79D66; color:#ffffff" type="submit href="{{path('app_home')}}"">
+                                Soumettre
+                                </button>
+                            {{ form_end(form) }}
+                        </form>
+                    </div>
+                </div>
+                <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2628.7982815413593!2d2.433622515893346!3d48.785741179280485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e673449d8b48e3%3A0x83768eac6932ce9f!2s9%20Rue%20Marc%20Seguin%2C%2094000%20Cr%C3%A9teil!5e0!3m2!1sfr!2sfr!4v1664376805336!5m2!1sfr!2sfr" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>   
+        </section>
+
+          
+    </main>
+
+    <style> 
+.offredelasemaine{
+      width: 90%;
+}
+    
+.sectionform{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 15%;
+    margin-right: 5%;
+  }
+  
+  .form-content{
+    border: solid 2px  rgb(72,69,38);
+    border-radius: 30px 5px 30px 5px;
+    min-width: 80%;
+    padding: 3%;
+    margin-left: 1%;
+  }
+  
+  .sectionform .h2vert{
+  margin-left: 55px;
+  }
+
+  .map{
+    border-radius: 30px 5px 30px 5px;
+    box-shadow: 3px 3px 5px 5px rgb(215, 157, 102, 0.3);
+    min-height: 250px;
+    min-width: 300px;
+    z-index:1;
+    transform: translateY(-50px);
+    display:none;
+    } 
+
+/* EXTRAS */
+.nosextras .imageExtras {
+    width: 60px;
+    height:60px;
+}
+
+.imageExtras img{ 
+    width: 60px;
+    height:60px;
+}
+
+/* RECETTE */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 700px;
+    perspective: 1000px;
+}
+
+.imagerecette{
+  width: 180px;
+  border-radius: 50%;
+  position: relative;
+left: 22%;
+  top:10%;
+}
+
+.imagerecette2{
+  width: 160px;
+  border-radius: 50%;
+  position: relative;
+  left: 22%;
+  top:10%;
+}
+
+.front-text{
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:center;
+  transform: translateY(300%);
+}
+
+.back-text{
+ display:flex;
+  flex-direction: column;
+  justify-content:center;
+   position: relative;
+  top:25%;
+  color: #ffffff;
+  padding-right:10px;
+}
+
+
+/* PLAT */
+.nos-plats{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    margin-left:50px;
+} 
+
+.plat{
+    background-image:url("build/images/fondblanc.svg");
+    background-repeat: no-repeat;
+    background-size:contain;
+} 
+
+/* .bg-plat{
+    background-image:url("assets/images/fondblanc.svg");
+    background-repeat: no-repeat;
+    background-size:contain;
+} */
+
+
+.plat img{
+    width: 140px;
+    border-radius: 50%;
+    position: relative;
+    top: -260px;
+    left: 160px;
+    z-index: 1;
+}
+
+
+@media screen and (min-width:500px) and (max-width:1020px){
+.offredelasemaine{
+    min-width: 100%;
+    min-height: 250px;
+}
+
+    .sectionform{
+    margin-left: 50px;
+    margin-right: 50px;
+    }
+
+    .form-content{
+        min-width: 65%;
+        margin-left: 0%;
+        padding-bottom: 60px;
+    }
+
+    .map{
+        min-height: 350px;
+        min-width: 70%;
+        display:block;
+    } 
+
+    .nos-plats{
+        flex-direction: row;
+        margin-left:0;
+    }
+
+    .logo{
+        margin-left:10px;
+        width:60px;
+    }
+    
+     .lentreprise2{
+      justify-content: flex-start;
+      width: auto;
+    }
+}
+
+   @media screen and (min-width:1021px){
+
+  .sectionform{
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom:120px;
+    }
+
+    .form{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+    }
+
+    .form-content{
+        min-width: 65%;
+        margin-left: 0%;
+        transform: translateX(180px);
+        padding-right: 100px;
+    }
+
+    .map{
+        min-height: 400px;
+        min-width: 40%;
+        transform: translateX(-100px);
+        display:block;
+    } 
+
+     .nos-plats{
+        flex-direction: row;
+    }
+
+    .nosextras{
+        gap:35px
+    }
+}
+</style>
+{% endblock %}
+
+

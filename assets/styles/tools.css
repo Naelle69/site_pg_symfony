@@ -1,0 +1,23 @@
+/* BOUTTONS */
+.bouttonBeige{
+    border-radius: 10px 2px; 
+    background-color: rgb(242, 182, 126);
+ /*    box-shadow: #484526 2px 3px; */
+    padding: 5px 15px;
+}
+
+.bouttonBeige:hover{
+    border: solid 2px #ffffff;
+}
+
+.bouttonVert{
+    border-radius: 10px 2px; 
+    background-color:#484526 ;
+ /*    box-shadow: rgb(242, 182, 126) 5px 15px; */
+    padding: 5px 15px;
+}
+
+.bouttonVert:hover{
+    border: solid 2px #ffffff;
+}
+

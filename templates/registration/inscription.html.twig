@@ -1,0 +1,172 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Inscriptiion - Pok'Gourmet{% endblock %}
+
+{% block body %}
+    <section  id="sectionform " class="formulaire col"{# class="container p-6 mr-6 ml-16 rounded-lg shadow-lg bg-white max-w-sm my-3 flex justify-center" #}>
+        <h2 class="h3vert ml-14 mt-11 mb-6">Inscrivez-vous!</h2>  
+        <div class="row form1 bg-white ml-14 mr-4 ">
+            <div class="col p-2">
+                    {{ form_start(inscriptionForm) }}
+                        
+                        {{form_row(inscriptionForm.lastname)}}
+                        {{form_row(inscriptionForm.firstname)}}
+                       
+                        {{form_row(inscriptionForm.phone)}}
+                        {{form_row(inscriptionForm.email)}}
+                        
+                        {{form_row(inscriptionForm.zipcode)}}
+                        {{form_row(inscriptionForm.address)}}
+
+                        {{form_row(inscriptionForm.password)}}
+                        {{form_row(inscriptionForm.confirm_password)}}
+
+                        <button class="bouttonBeige mt-4" style="background-color: #D79D66; color:#ffffff" type="submit">
+                        Inscription
+                        </button>
+
+                    {{ form_end(inscriptionForm) }}      
+            </div>
+        </div>
+    </section>
+
+    <style>
+ #sectionform{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  
+  .form1{
+    border: solid 1px  rgb(72,69,38);
+    border-radius: 30px 5px 30px 5px;
+    min-width: 80%;
+    padding: 3%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 30px;
+  }
+  
+  #sectionform .h2vert{
+  margin-left: 55px;
+  }
+
+  .map{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 15%;
+    margin-right: 5%;
+    margin-bottom: 50px;
+    border-radius: 30px 5px 30px 5px;
+    box-shadow: 3px 3px 5px 5px rgb(215, 157, 102, 0.3);
+    min-height: 250px;
+    min-width: 300px;
+  }
+
+  /* TABLETTE */
+@media screen and (min-width:500px) and (max-width:1020px){
+  
+    #sectionform{
+    margin-top: 50px;
+    }
+  
+  .form2{
+    min-width: 250px;
+    margin-top: 150p;
+  }
+
+  .formulaire{
+    margin-top: 150px;
+    margin-bottom: 30px;
+  }
+  
+  .map{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(-100px);
+    margin-bottom: 0;
+    border-radius: 30px 5px 30px 5px;
+    box-shadow: 3px 3px 5px 5px rgb(215, 157, 102, 0.3);
+    height: 250px;
+    min-width: 60%;
+    margin-left: 25%;
+  }
+  
+  .h2marron{
+    margin-bottom: 0px;
+  }
+}
+
+
+
+  @media screen and (min-width:1021px){
+
+#sectionform{
+    margin-top: 200px;
+    margin-bottom: 100px;
+    }
+
+   #sectionform h2{
+      margin-left: 100px;
+      margin-bottom: 50px;
+      }
+
+    .form1{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      margin-bottom: 50px;
+    }
+
+    .form2{
+      min-width: 50%;
+      height: auto;
+      padding: 2%;
+      padding-right: 100px;
+      margin: 0px;
+      margin-right: 0%;
+      margin-top: 150px;
+    }
+
+    .formulaire{
+      margin-top: 200px;
+      margin-bottom: 110px;
+      margin-left: 300px;
+      margin-right: 300px;
+      min-width: 60%;
+    }
+    
+    
+   .map{
+      min-height: auto;
+      min-width: 30%;
+      min-width: 100%;
+      min-height:400px ;
+      margin-top: 0px;
+      align-items: center;
+      transform: translateX(-130px);
+    }
+
+
+    /* PANIER */
+
+    .panier{
+      padding-top: 0px;
+      min-width: 40%;
+      margin-top: 150px;
+      margin-bottom: 150px;
+    }
+
+    .votrepanier{
+      margin-top: 150px;
+      margin-bottom: 100px;
+      padding-top: 0px;
+    }
+}
+    </style>
+
+
+{% endblock %}

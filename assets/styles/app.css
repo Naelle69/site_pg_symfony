@@ -1,0 +1,10 @@
+
+@import 'styleMobile.css';
+@import 'styleTablette.css';
+@import 'styleDesktop.css';
+@import 'tools.css';
+@import 'typo.css';
+@import 'form.css';
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';

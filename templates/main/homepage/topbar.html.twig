@@ -1,0 +1,80 @@
+<nav class="web">
+	<a class="navbarlogo" href="{{path('app_home')}}">
+		<img class="logo" src="{{asset('assets/images/logobeige.svg')}}" alt="POK'GOURMET Logo" class="brand-logo"/>
+	</a>
+	<!-- <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a> -->
+
+	<ul class="menuweb justify-content-space-between right hide-on-med-and-down" width="1000">
+
+		<li class="menunav-item">
+			<a class="h5menu" href="{{path('app_home')}}">Accueil</a>
+		</li>
+
+		<li class="menunav-item ">
+			<a class="h5menu" href="#">Concept</a>
+		</li>
+
+		<li class="menunav-item ">
+			<a class="h5menu" href="{{path('app_blog')}}">Blog conseils</a>
+		</li>
+	</ul>
+
+	<ul class="menuweb justify-content-space-between right hide-on-med-and-down">
+			<a class="panierclient" href="{{path('app_panier_index')}}">
+				<img src="{{asset('assets/images/svg-icones/panierclient.svg')}}" alt="Panier" width="20"/> 
+			</a
+            {% if app.user %}
+                {% if 'ROLE_ADMIN' in  app.user.roles %} 
+					<li>
+						<a class="moncompte" href="{{path('admin')}}">
+							<img src="{{asset('assets/images/svg-icones/dashboard.svg')}}" alt="Administartion" width="20"/>
+						</a>
+					</li>
+				{# {% else 'ROLE_USER' in  app.user.roles %} #}
+					
+            	{% endif %}
+					<li class="nav-item">
+						<a class="moncompte" href="{{path('app_login')}}">
+							<img src="{{asset('assets/images/svg-icones/moncompte.svg')}}" alt="Mon compte" width="20"/>
+						</a>
+						
+					</li>
+					<li class="nav-item">
+						<a class="h5menu connection bouttonBeige" href="{{ path('app_logout') }}">Déconnexion</a>
+					</li>
+            {% else %}
+                <li class="nav-item">
+                    <a class="h5menu minscrire bouttonBeige" href="{{ path('app_inscription') }}">Inscription</a>
+                </li>
+                <li class="nav-item">
+                    <a class="h5menu login bouttonBeige" href="{{ path('app_login') }}">Connexion</a>
+                </li>
+            {% endif %}
+    </ul>
+</nav>
+
+<style>
+.logo{
+	width:70px;
+}
+
+@media screen and (min-width:500px) and (max-width:1020px){
+.logo{
+	width:60px;
+}	
+}
+</style>
+
+<script>
+window.addEventListener("scroll", function() {
+const footer = document.querySelector(".footer");
+const scrollPosition = window.innerHeight + window.scrollY;
+const footerPosition = footer.offsetTop + footer.offsetHeight;
+  
+  if (scrollPosition >= footerPosition) {
+    footer.style.backgroundColor = "#62615C";
+  } else {
+    footer.style.backgroundColor = "#484526";
+  }
+});
+</script>
